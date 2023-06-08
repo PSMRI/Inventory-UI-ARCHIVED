@@ -1,4 +1,4 @@
-# Inventory UI
+# AMRIT - Inventory 
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)  
 
@@ -14,10 +14,10 @@ This repository contains the user interface (UI) design for an inventory managem
 * User Management: Allows administrators to manage user accounts and access permissions.
 
 ## Building From Source
-Clone the repository to your local machine and install the dependencies using node package manager(npm), then
-ng build
-ng test
-ng serve
+Clone the repository to your local machine and install the dependencies using node package manager(npm)
+* ng build
+* ng test
+* ng serve
 
 ### Prerequisites 
 * [Inventory-API](https://github.com/PSMRI/Inventory-API) module must be running
