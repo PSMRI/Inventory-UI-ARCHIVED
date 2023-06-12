@@ -1,3 +1,11 @@
 {
-  "version": "1.0.1"
+  "version": "1.0.1",
+  "hash": "ee84de508b09a534a1d1f15a4c07a58c22892b35",
+  "shortHash": "ee84de5",
+  "commit": "ee84de508b09a534a1d1f15a4c07a58c22892b35",
+  "shortCommit": "ee84de5",
+  "author": "Vidyadevi Salunkhe",
+  "email": "84471226+Vidyaaa24@users.noreply.github.com",
+  "date": "Mon Jun 12 12:18:33 2023 +0530",
+  "message": "Merge pull request #3 from PSMRI/pwdEncript\n    \n    Pwd encript"
 }
