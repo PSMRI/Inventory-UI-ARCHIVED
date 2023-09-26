@@ -60,6 +60,7 @@
 
   },
   "devDependencies": {
+    "bcrypt": "^5.0.0",                                                    
     "@angular/cli": "1.7.0",
     "@angular/compiler-cli": "^4.2.4",
     "@angular/language-service": "^4.2.4",
@@ -68,8 +69,6 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.1.1",
-    "electron": "1.7.10",
-    "electron-packager": "10.1.0",
     "grunt": "^1.0.3",
     "grunt-war": "^0.5.1",
     "jasmine-core": "2.5.2",
