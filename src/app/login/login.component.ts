@@ -23,7 +23,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from './authentication.service';
 import { ConfirmationService } from '../app-modules/core/services/confirmation.service';
-//import * as CryptoJS from 'crypto-js';
 import * as bcrypt from 'bcrypt';
 @Component({
   selector: 'app-login-cmp',
@@ -50,7 +49,6 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthenticationService,
     private confirmationService: ConfirmationService,
-    //private router: Router) { }
 
     private router: Router) {
       this._keySize = 256;
@@ -67,7 +65,6 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  // roleObj: any;
   roleArray = [];
 
 
@@ -90,34 +87,6 @@ export class LoginComponent implements OnInit {
   set iterationCount(value) {
     this._iterationCount = value;
   }
-
-
-
-  //generateKey(salt, passPhrase) {
-    //return CryptoJS.PBKDF2(passPhrase, CryptoJS.enc.Hex.parse(salt), {
-      //hasher: CryptoJS.algo.SHA512,
-      //keySize: this.keySize / 32,
-      //iterations: this._iterationCount
-    //})
-  //}
-
-
-
-  //encryptWithIvSalt(salt, iv, passPhrase, plainText) {
-    //let key = this.generateKey(salt, passPhrase);
-    //let encrypted = CryptoJS.AES.encrypt(plainText, key, {
-     // iv: CryptoJS.enc.Hex.parse(iv)
-    //});
-    //return encrypted.ciphertext.toString(CryptoJS.enc.Base64);
-  //}
-
-  //encrypt(passPhrase, plainText) {
-   // let iv = CryptoJS.lib.WordArray.random(this._ivSize / 8).toString(CryptoJS.enc.Hex);
-    //let salt = CryptoJS.lib.WordArray.random(this.keySize / 8).toString(CryptoJS.enc.Hex);
-    //let ciphertext = this.encryptWithIvSalt(salt, iv, passPhrase, plainText);
-    //return salt + iv + ciphertext;
-  //}
-
 
   login() {
     let plainPassword = this.password;
@@ -166,13 +135,6 @@ export class LoginComponent implements OnInit {
           else {
             sessionStorage.clear();
             this.router.navigate(["/login"]);
-            // this.confirmationService.alert(res.errorMessage, 'error');
-         // }
-       // });
-        //}
-        //else {  
-          //this.confirmationService.alert(res.errorMessage, 'error');
-        //}
         
       }
       }, err => {
