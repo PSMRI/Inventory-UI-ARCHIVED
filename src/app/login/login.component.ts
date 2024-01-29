@@ -32,7 +32,7 @@ import * as CryptoJS from 'crypto-js';
 export class LoginComponent implements OnInit {
 
   userName: any;
-  password: any;
+  code: any;
   designation: any;
   dynamictype = 'password';
 
@@ -119,7 +119,7 @@ export class LoginComponent implements OnInit {
 
 
   login() {
-    let encryptPassword = this.encrypt(this.Key_IV, this.password)
+    let encryptPassword = this.encrypt(this.Key_IV, this.code)
     this.authService.login(this.userName.trim(), encryptPassword, false)
       .subscribe(res => {
         if (res.statusCode == '200') {
