@@ -13,16 +13,23 @@ This repository contains the user interface (UI) design for an inventory managem
 * Reporting: Provides reports and analytics on inventory performance, sales and trends.
 * User Management: Allows administrators to manage user accounts and access permissions.
 
-## Building From Source
-Clone the repository to your local machine and install the dependencies using node package manager(npm)
-* ng build
-* ng test
-* ng serve
+### Building from source 
+
+1. To build deployable war files
+```bash
+mvn -B package --file pom.xml -P <profile_name>
+```
+
+The available profiles include dev, local, test, and ci.
+Refer to `src/environments/environment.ci.template` file and ensure that the right environment variables are set for the build.
+
+Packing with `ci` profile calls `build-ci` script in `package.json`.
+It creates a `environment.ci.ts` file with all environment variables used in the generated build.
 
 ### Prerequisites 
 * [Inventory-API](https://github.com/PSMRI/Inventory-API) module must be running
-* JDK 1.8
-* Nodejs
+* JDK 17.0
+* Nodejs v16
 * MySQL
 
 ## Installation
